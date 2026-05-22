@@ -1,1 +1,6 @@
--r requirements.txt
+fastapi
+uvicorn
+chromadb
+groq
+pypdf
+python-multipart
