@@ -1,4 +1,4 @@
-# Headway Banking Support Chatbot
+# Headwy Banking Support Chatbot
 
 RAG-powered banking assistant built for the Headwy GenAI assignment. Answers customer questions on loans, credit cards, and FAQs using document retrieval + an LLM.
 
