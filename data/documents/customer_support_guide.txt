@@ -1,0 +1,24 @@
+Headway Bank — Customer Support Knowledge Base
+
+Account blocked / login issues
+If internet banking is locked after 3 wrong passwords, use "Forgot password" or call IVR 1800-123-4567 option 2 to unlock after OTP verification.
+
+Card lost or stolen
+Block card immediately in the app under Cards > Block, or call 1800-123-4567. Replacement card dispatched in 5–7 working days; fee ₹200 unless premium card with free replacement benefit.
+
+Loan statement
+Download loan account statement from app > Loans > Statements. Provisional certificate for FY available in January.
+
+Complaint escalation
+- Level 1: Branch / chat / email support@headwaybank.in — target resolution 7 days
+- Level 2: Nodal officer nodal@headwaybank.in — 15 days
+- Level 3: RBI Ombudsman if unresolved after 30 days
+
+Fraud reporting
+For phishing or UPI fraud, call 1800-999-8888 (dedicated fraud line) within 24 hours. Do not share OTP, CVV, or UPI PIN with anyone.
+
+Branch appointment
+Book video or branch appointment via app > Help > Book appointment. Average wait time 15 minutes for walk-ins at metro branches.
+
+Working hours
+Branches: Mon–Sat 10:00–16:00 (2nd and 4th Saturday off in select locations). Digital support 24x7.

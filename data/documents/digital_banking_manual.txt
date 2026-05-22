@@ -1,0 +1,24 @@
+Headway Bank — Digital Banking Manual
+
+Mobile app features
+- Check balance, transfer funds (IMPS/NEFT/RTGS), pay bills, open FD, apply for loans
+- Biometric login supported on Android and iOS
+- App version below 4.2 must be updated by Dec 2025 for security patches
+
+UPI limits
+Daily UPI send limit ₹1,00,000 default; can be increased to ₹2,00,000 after 90 days of usage with full KYC.
+
+Beneficiary cooling period
+New payee added via NEFT/IMPS has a ₹25,000 limit for the first 24 hours; full limit after 24 hours.
+
+Standing instructions
+Set recurring transfers for rent, SIP, or EMIs. Modify or cancel anytime from app > Payments > Standing instructions.
+
+e-KYC for new account
+Open savings account via Aadhaar OTP e-KYC. Initial credit limit ₹50,000 until physical KYC or video KYC completed within 12 months.
+
+Security tips
+Enable transaction alerts for SMS and email. Never install screen-sharing apps during banking. Bank never asks for OTP over phone.
+
+Download statements
+Savings and credit card statements available for last 7 years in PDF from app > Accounts > Download statement.

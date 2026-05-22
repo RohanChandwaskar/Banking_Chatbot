@@ -1,0 +1,30 @@
+# Render Blueprint — deploy API + Streamlit UI (free tier)
+# After deploy, set GROQ_API_KEY in both service dashboards.
+# Set API_URL on the UI service to your API public URL.
+
+services:
+  - type: web
+    name: banking-chatbot-api
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn backend.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: GROQ_API_KEY
+        sync: false
+      - key: GROQ_MODEL
+        value: llama-3.1-8b-instant
+      - key: PYTHON_VERSION
+        value: "3.11.8"
+
+  - type: web
+    name: banking-chatbot-ui
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: streamlit run frontend/streamlit_app.py --server.port $PORT --server.address 0.0.0.0 --server.headless true
+    envVars:
+      - key: API_URL
+        sync: false
+      - key: PYTHON_VERSION
+        value: "3.11.8"
