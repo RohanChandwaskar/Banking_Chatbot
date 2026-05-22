@@ -38,6 +38,13 @@ with st.sidebar:
         st.rerun()
 
     st.divider()
+    st.info(
+        "💡 **First time loading?** Because this app uses Render's free hosting tier, "
+        "the backend service completely powers down during inactivity. "
+        "Please allow up to **60 seconds** for the initial spin-up. If you see an error "
+        "below, just give it a minute and refresh your page!"
+    )
+    st.divider()
     st.subheader("Upload document")
     uploaded = st.file_uploader("PDF or TXT", type=["pdf", "txt"])
     if uploaded and st.button("Upload to knowledge base"):
