@@ -61,8 +61,7 @@ def _get_collection():
     CHROMA_DIR.mkdir(parents=True, exist_ok=True)
     client = chromadb.PersistentClient(path=str(CHROMA_DIR))
     
-    # 🌟 Uses a lightweight, low-memory production embedding function
-    # Fast startup, handles file uploads perfectly, and uses less than 40MB RAM!
+
     from chromadb.utils import embedding_functions
     ef = embedding_functions.DefaultEmbeddingFunction()
     
@@ -174,7 +173,7 @@ def chat(message: str, session_id: str = "default") -> dict:
     context = _format_context(chunks)
     history = _history_for_prompt(session_id)
 
-    system = """You are Headway Bank's customer support assistant.
+    system = """You are Headwy Bank's customer support assistant.
 Answer ONLY using the provided context and conversation history.
 If the answer is not in the context, say you don't have that information and suggest contacting support.
 Be concise, friendly, and accurate. Do not invent rates, fees, or policies."""
