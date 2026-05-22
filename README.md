@@ -2,9 +2,9 @@
 
 RAG-powered banking assistant built for the Headwy GenAI assignment. Answers customer questions on loans, credit cards, and FAQs using document retrieval + an LLM.
 
-**Live demo:** _(add your Render URLs after deploy)_  
-- API: `https://banking-chatbot-api.onrender.com`  
-- UI: `https://banking-chatbot-ui.onrender.com`
+**Live Demo:** 
+- **Backend API:** [https://banking-chatbot-api-z2dq.onrender.com](https://banking-chatbot-api-z2dq.onrender.com)
+- **Frontend UI:** [https://banking-chatbot-ui.onrender.com](https://banking-chatbot-ui.onrender.com)
 
 ## What it does
 
@@ -69,7 +69,7 @@ curl -X POST http://localhost:8000/upload \
 1. Push repo to GitHub
 2. [Render Dashboard](https://dashboard.render.com) → **New Blueprint** → connect repo (`render.yaml` creates 2 services)
 3. Set `GROQ_API_KEY` on the API service
-4. Set `API_URL` on the UI service to the API public URL (e.g. `https://banking-chatbot-api.onrender.com`)
+4. Set `API_URL` on the UI service to the API public URL 
 5. Wait for build (~5–10 min first time)
 
 **Out of memory (512MB) on deploy?** The API uses `requirements-api.txt` (no PyTorch / `sentence-transformers`). Embeddings use Chroma’s **ONNX MiniLM** (~80MB RAM vs ~400MB+ for PyTorch).
@@ -112,4 +112,5 @@ Synthetic Headway Bank documents (Option B in the brief): loan FAQs, card policy
 
 ## Author
 
-Built in ~2 days for Headwy placement assignment.
+Built with focus on production-ready structures for the Headwy placement selection assignment.
+(Timeline - 3 Days)
