@@ -10,7 +10,7 @@ load_dotenv()
 API_URL = os.getenv("API_URL", "http://localhost:8000").rstrip("/")
 
 st.set_page_config(
-    page_title="Headway Bank Support",
+    page_title="Headwy Bank Support",
     page_icon="🏦",
     layout="centered",
 )
@@ -21,7 +21,7 @@ if "session_id" not in st.session_state:
 if "messages" not in st.session_state:
     st.session_state.messages = []
 
-st.title("Headway Bank Support")
+st.title("Headwy Bank Support")
 st.caption("AI assistant for loans, cards, and banking FAQs — powered by RAG")
 
 with st.sidebar:

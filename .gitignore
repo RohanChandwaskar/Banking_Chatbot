@@ -2,7 +2,7 @@
 __pycache__/
 *.pyc
 .chroma/
-data/chroma/
+# data/chroma/  — uncomment line above and commit data/chroma after build_index.py for Render
 .venv/
 venv/
 *.egg-info/

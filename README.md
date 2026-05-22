@@ -70,7 +70,21 @@ curl -X POST http://localhost:8000/upload \
 2. [Render Dashboard](https://dashboard.render.com) → **New Blueprint** → connect repo (`render.yaml` creates 2 services)
 3. Set `GROQ_API_KEY` on the API service
 4. Set `API_URL` on the UI service to the API public URL (e.g. `https://banking-chatbot-api.onrender.com`)
-5. Wait for build (~5–10 min first time; embedding model download adds time)
+5. Wait for build (~5–10 min first time)
+
+**Out of memory (512MB) on deploy?** The API uses `requirements-api.txt` (no PyTorch / `sentence-transformers`). Embeddings use Chroma’s **ONNX MiniLM** (~80MB RAM vs ~400MB+ for PyTorch).
+
+If the API still OOMs on startup seeding, pre-build the index locally and commit it:
+
+```bash
+pip install -r requirements-api.txt
+python scripts/build_index.py
+# Re-enable data/chroma/ in .gitignore (comment it out), then:
+git add data/chroma
+git commit -m "Add prebuilt Chroma index for Render"
+```
+
+On Render API service, set env `SEED_ON_STARTUP=false`.
 
 > Free tier sleeps after inactivity — first request may take 30–60s to wake.
 

@@ -8,7 +8,7 @@ from fastapi import FastAPI, File, HTTPException, UploadFile
 load_dotenv()
 from fastapi.middleware.cors import CORSMiddleware
 
-from backend.config import DOCUMENTS_DIR
+from backend.config import DOCUMENTS_DIR, SEED_ON_STARTUP
 from backend.models import ChatRequest, ChatResponse, HealthResponse
 from backend.rag import chat, document_count, ingest_document
 from backend.seed_data import seed_if_empty
@@ -19,7 +19,8 @@ ALLOWED_EXTENSIONS = {".txt", ".pdf"}
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     DOCUMENTS_DIR.mkdir(parents=True, exist_ok=True)
-    seeded = seed_if_empty()
+    # On Render: set SEED_ON_STARTUP=false if data/chroma is committed to the repo
+    seeded = seed_if_empty() if SEED_ON_STARTUP else 0
     app.state.seeded_chunks = seeded
     yield
 
